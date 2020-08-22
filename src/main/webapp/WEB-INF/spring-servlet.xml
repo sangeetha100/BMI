@@ -19,7 +19,7 @@
     
 <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">    
 <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>    
-<property name="url" value="jdbc:mysql://127.0.0.1:3306/test"></property>    
+<property name="url" value="jdbc:mysql://127.0.0.1:3306/bmi"></property>    
 <property name="username" value="root"></property>    
 <property name="password" value="sangeetha05071999"></property>    
 </bean>    
@@ -27,4 +27,7 @@
 <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">    
 <property name="dataSource" ref="ds"></property>    
 </bean>    
+<bean id="dao" class="com.san.dao.BmiDao">    
+<property name="template" ref="jt"></property>    
+</bean>  
     </beans>
